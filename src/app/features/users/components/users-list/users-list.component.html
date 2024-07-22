@@ -1,2 +1,28 @@
-<form-field/>
-<h1 class="container borde">dfdf</h1>
+<div>
+  <h3>Users</h3>
+  <div class="d-flex align-items-center justify-content-between my-5">
+    <form-field style="width: 60%" />
+    <flat-button style="width: 18%" text="Search" (search)="search()" />
+    <flat-button [style.visibility] = "users.length <=1 ? 'visible' : 'hidden' " style="width: 18%" text="Reset" (reset)="reset()" />
+  </div>
+  <div
+    id="user-list"
+    class="border border-1 rounded overflow-x-hidden"
+    [ngClass]="{ 'row row-cols-2 row-cols-lg-3 g-4': users.length > 1, 'd-flex justify-content-center align-items-center': users.length <= 1, }"
+  >
+    @for ( user of users; track user.id ) {
+
+    <user
+      [user]="{
+        name: user.username,
+        email: user.email,
+        phone: user.phone,
+        image: user.image,
+        is_verified: user.is_verified
+      }"
+    />
+    } @empty {
+    <p class="text-danger h2 my-3">No Results!!!</p>
+    }
+  </div>
+</div>

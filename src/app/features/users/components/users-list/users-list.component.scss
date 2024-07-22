@@ -1,0 +1,24 @@
+#user-list {
+    height: 60vh;
+}
+
+/* Customize the scrollbar */
+#user-list::-webkit-scrollbar {
+  width: 12px; /* Width of the entire scrollbar */
+}
+
+/* The scrollbar track (background) */
+#user-list::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+}
+
+/* The scrollbar handle (thumb) */
+#user-list::-webkit-scrollbar-thumb {
+  background: #005cbb; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Round the corners of the thumb */
+}
+
+/* Handle on hover */
+#user-list::-webkit-scrollbar-thumb:hover {
+  background: #014991; /* Color when hovering over the thumb */
+}

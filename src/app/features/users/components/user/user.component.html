@@ -1,1 +1,23 @@
-<p>user works!</p>
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <div
+      mat-card-avatar
+      class="example-header-image"
+      [ngStyle]="{
+        'background-image': user.is_verified
+          ? 'url(/verified.png)'
+          : 'url(/unverified.png)'
+      }"
+    ></div>
+    <mat-card-title>{{ user.name }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="user.image" alt="Photo of a Shiba Inu" />
+  <mat-card-content>
+    <p>
+      {{ user.email }}
+    </p>
+    <p>
+      {{ user.phone }}
+    </p>
+  </mat-card-content>
+</mat-card>

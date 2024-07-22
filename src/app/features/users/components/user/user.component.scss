@@ -1,0 +1,23 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+img {
+  border: solid 1px #ccc;
+  border-radius: 100%;
+  // width: 50%;
+  margin: 10%;
+}
+
+mat-card-content {
+  // border: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+}

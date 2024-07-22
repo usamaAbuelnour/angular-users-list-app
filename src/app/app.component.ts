@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import users from '../../data/users.json';
 import { UsersListComponent } from './features/users/components/users-list/users-list.component';
 
 @Component({
